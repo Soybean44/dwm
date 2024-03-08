@@ -1,3 +1,4 @@
+#include <X11/XF86keysym.h>
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -75,9 +76,14 @@ static const char *termcmd[] = {"kitty", NULL};
 static const char *browsercmd[] = {"zsh", "-c", "$BROWSER", NULL};
 static const char *shutdowncmd[] = {"shutdown", "now", NULL};
 static const char *lockscreencmd[] = {"xscreensaver-command", "-lock", NULL};
+static const char *brightnessUp[] = {"brightnessctl", "set", "+5%", NULL};
+static const char *brightnessDown[] = {"brightnessctl", "set", "5%-", NULL};
+
 #include "movestack.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+  {0,       XF86XK_MonBrightnessUp, spawn,    {.v=brightnessUp}},
+  {0,       XF86XK_MonBrightnessDown, spawn, {.v=brightnessDown}},
 	{MODKEY, XK_d, spawn, {.v = dmenucmd}},
 	{MODKEY, XK_t, spawn, {.v = termcmd}},
 	{MODKEY, XK_b, spawn, {.v = browsercmd}},
