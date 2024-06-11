@@ -75,7 +75,7 @@ static const char *dmenucmd[] = {"/home/soybean44/.config/rofi/bin/launcher", NU
 static const char *termcmd[] = {"st", NULL};
 static const char *browsercmd[] = {"zsh", "-c", "$BROWSER", NULL};
 static const char *shutdowncmd[] = {"shutdown", "now", NULL};
-static const char *lockscreencmd[] = {"xscreensaver-command", "-lock", NULL};
+static const char *lockscreencmd[] = {"slock", NULL};
 static const char *brightnessUp[] = {"brightnessctl", "set", "+5%", NULL};
 static const char *brightnessDown[] = {"brightnessctl", "set", "5%-", NULL};
 
