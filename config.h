@@ -4,6 +4,11 @@
 /* appearance */
 static const unsigned int borderpx = 1; /* border pixel of windows */
 static const unsigned int snap = 32;	/* snap pixel */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning =
     0; /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft =
@@ -82,8 +87,8 @@ static const char *brightnessDown[] = {"brightnessctl", "set", "5%-", NULL};
 #include "movestack.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-  {0,       XF86XK_MonBrightnessUp, spawn,    {.v=brightnessUp}},
-  {0,       XF86XK_MonBrightnessDown, spawn, {.v=brightnessDown}},
+	{0,       XF86XK_MonBrightnessUp, spawn,    {.v=brightnessUp}},
+	{0,       XF86XK_MonBrightnessDown, spawn, {.v=brightnessDown}},
 	{MODKEY, XK_d, spawn, {.v = dmenucmd}},
 	{MODKEY, XK_t, spawn, {.v = termcmd}},
 	{MODKEY, XK_b, spawn, {.v = browsercmd}},
