@@ -84,7 +84,7 @@ static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"/home/soybean44/.config/rofi/bin/launcher",
                                  NULL};
-static const char *termcmd[] = {"st", NULL};
+static const char *termcmd[] = {"ghostty", NULL};
 static const char *browsercmd[] = {"zsh", "-c", "$BROWSER", NULL};
 static const char *shutdowncmd[] = {"shutdown", "now", NULL};
 static const char *lockscreencmd[] = {"slock", NULL};
