@@ -82,7 +82,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {"/home/soybean44/.config/rofi/bin/launcher",
+static const char *dmenucmd[] = {"rofi", "-show", "drun"
                                  NULL};
 static const char *termcmd[] = {"ghostty", NULL};
 static const char *browsercmd[] = {"zsh", "-c", "$BROWSER", NULL};
